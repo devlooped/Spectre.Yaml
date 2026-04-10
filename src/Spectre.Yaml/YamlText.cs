@@ -126,27 +126,27 @@ public sealed class YamlText(string yaml) : JustInTimeRenderable
                     break;
 
                 case MappingStart:
-                {
-                    var isDirectSeqItem = sequenceDepth > 0 &&
-                        mappingDepth == sequenceBaseMappingDepth.Peek();
+                    {
+                        var isDirectSeqItem = sequenceDepth > 0 &&
+                            mappingDepth == sequenceBaseMappingDepth.Peek();
 
-                    // Nested mapping as a mapping value requires a newline after the parent key
-                    if (mappingDepth > 0 && !expectingKey && !isDirectSeqItem)
-                        needNewline = true;
+                        // Nested mapping as a mapping value requires a newline after the parent key
+                        if (mappingDepth > 0 && !expectingKey && !isDirectSeqItem)
+                            needNewline = true;
 
-                    if (isDirectSeqItem)
-                        sequenceItemFirstKey = true;
+                        if (isDirectSeqItem)
+                            sequenceItemFirstKey = true;
 
-                    indentStack.Push(indent);
-                    mappingDepth++;
-                    expectingKey = true;
+                        indentStack.Push(indent);
+                        mappingDepth++;
+                        expectingKey = true;
 
-                    if (!firstEvent)
-                        indent += 2;
+                        if (!firstEvent)
+                            indent += 2;
 
-                    firstEvent = false;
-                    break;
-                }
+                        firstEvent = false;
+                        break;
+                    }
 
                 case MappingEnd:
                     indent = indentStack.Pop();
