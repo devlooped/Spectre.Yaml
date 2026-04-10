@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/Spectre.Yaml/Spectre.Yaml.csproj" />
+  <Project Path="src/Tests/Tests.csproj" />
+  <Project Path="src/Sample/Sample.csproj" />
+</Solution>
