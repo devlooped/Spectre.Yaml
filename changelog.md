@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.0](https://github.com/devlooped/Spectre.Yaml/tree/v1.0.0) (2026-04-10)
+
+[Full Changelog](https://github.com/devlooped/Spectre.Yaml/compare/v1.0.0-alpha...v1.0.0)
+
 ## [v1.0.0-alpha](https://github.com/devlooped/Spectre.Yaml/tree/v1.0.0-alpha) (2026-04-10)
 
 [Full Changelog](https://github.com/devlooped/Spectre.Yaml/compare/58b8f6c635657be9752084aaf3c43d6c9f0ec383...v1.0.0-alpha)
